@@ -9,35 +9,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-  <header id="header-nav" class="navbar-fixed-top main-nav">
-    	<div class="container">
-    		<!-- <div class="row"> -->
-                 <div class="navbar-header ">
-                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{!! URL::asset('/') !!}">
-                            <img src="{!! URL::asset('assets/img/logo.png') !!}" alt="" width="200" height="50">
-                        </a>
-                 </div><!--Navbar header End-->
-                 	<nav class="collapse navbar-collapse navigation" id="navbar-collapse" role="navigation">
-                        <ul class="nav navbar-nav navbar-right ">
-                            <li><a class="active" href="{!! URL::asset('/') !!}">Home</a></li>
-                            <li><a href="{!! URL::asset('company/tips') !!}">Travel Tips</a></li>
-                            <li><a href="{!! URL::asset('company/contact') !!}">Hubungi Kami</a></li>
-                            
-                           @if($logged)
-                            <li> <a href="{!! URL::asset('profile/') !!}/{{ $username }} " ><button class="nav-button login">Hi, {{ $username }}</button></a> </li>
-                            <li> <a href="{!! URL::asset('account/logout') !!}"><button class="nav-button login">Logout</button></a> </li>
-                           @else 
-                            <li> <a href="{!! URL::asset('account/login') !!}"><button class="nav-button login">Login</button></a> </li>
-                            <li><a href="{!! URL::asset('account/daftar') !!}"><button class="nav-button ">Daftar</button></a> </li>
-                           @endif 
-                           
-                        </ul>
-                     </nav>
-                </div><!-- /.container-fluid -->
-</header>
+  <!-- Main Menu -->
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top" style="background-color:#FFF">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+                  <a class="navbar-brand d-inline-block align-top" href="#">
+                    <img src="{!! URL::asset('assets/img/logo.png') !!}" height="40" alt="logo">
+                  </a>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    
+                    <ul class="navbar-nav">
+	                    <li class="nav-item active">
+	                       <a class="nav-link" href="#">Home</a>
+	                     </li>
+                         <li class="nav-item">
+	                       <a class="nav-link" href="#">Travel Blog</a>
+	                     </li>
+                         <li class="nav-item ">
+	                       <a class="nav-link" href="#">Hubungi Kami</a>
+	                     </li>
+                        <li class="nav-item">
+                          	<input class="btn btn-outline-primary btn-login" type="button" value="Login">
+						  	<input class="btn btn-primary btm-signup" type="button" value="Daftar">
+                        </li>
+                    </ul>
+                </div>
+           
+      </nav>
+      <!-- End Main Menu -->
